@@ -1,0 +1,116 @@
+/* Global styles */
+.body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #808080; /* permanent grey */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+
+.calculator {
+    background: #2c2c3c;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+input {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    text-align: right;
+    background: #3a3a4f;
+    color: white;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+button {
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+/* Light/Dark Mode Toggle Button */
+.light {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    background: #ffdd57;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.light:hover {
+    transform: rotate(20deg);
+}
+
+/* Operator Buttons */
+.buttons .operator, .buttons .clear, .buttons .clearresult, .result {
+    background: #635f5f;
+    color: white;
+}
+
+.buttons .operator:hover {
+    background: #7b7575;
+}
+
+.result:hover {
+    background: #4caf50;
+    color: white;
+}
+
+.clear:hover {
+    background: #e53935;
+}
+
+.clearresult:hover {
+    background: #f57c00;
+}
+
+/* Number buttons */
+.displaynumber {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    gap: 10px;
+}
+
+.displaynumber .numbers {
+    background: #797575;
+    color: white;
+}
+
+.displaynumber .numbers:hover {
+    background: #a09e9e;
+    transform: scale(1.1);
+}
+
+/* Smooth animation for theme toggle */
+.transition {
+    transition: all 0.5s ease;
+}
